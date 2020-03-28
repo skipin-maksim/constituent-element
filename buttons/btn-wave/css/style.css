@@ -14,11 +14,18 @@ body {
   height: 100%;
 }
 body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   background-color: #000;
 }
-.wrapper-wave-btn{
-	margin: 50px;
+a {
+  text-decoration: none;
 }
+.wrapper-btn{
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+}
+/* wave */
 .wave-btn {
   position: relative;
   width: 280px;
@@ -26,7 +33,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
   border-radius: 0 0 10px 10px;
   transition: all 0.8s ease 0s;
   overflow: hidden;
@@ -40,7 +46,6 @@ body {
   top: -50px;
 }
 .wave-btn__text {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 8px;
@@ -85,3 +90,98 @@ body {
     transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
   }
 }
+/* ./wave */
+
+/* shackled */
+.btn-shackled {
+  position: relative;
+  display: inline-block;
+  columns: #fff;
+}
+.btn-shackled::before,
+.btn-shackled::after {
+  content: "";
+  position: absolute;
+  margin-left: -40px;
+  top: -10px;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #ff0000;
+  transition: all 0.8s ease;
+  z-index: 1;
+}
+.btn-shackled::before {
+  animation: rotate-s 20s infinite linear;
+}
+.btn-shackled::after {
+  animation: rotate-s 25s infinite linear;
+}
+
+.btn-shackled:hover .btn-shackled__text {
+  top: -10px;
+  color: #fff;
+  box-shadow: 0 5px 0 0 #1e3991;
+  transition: all 0.5s ease 0.2s;
+}
+.btn-shackled:active .btn-shackled__text {
+  top: -7px;
+  box-shadow: 0 2px 0 0 #1e3991;
+  transition: all 0.1s ease;
+}
+.btn-shackled:hover::before,
+.btn-shackled:hover::after {
+  left: 100%;
+  opacity: 0;
+}
+.btn-shackled:hover .btn-shackled__text::before {
+  width: 100%;
+}
+.btn-shackled:hover .btn-shackled__text::before,
+.btn-shackled:hover .btn-shackled__text::after {
+  background-color: #4973ff;
+}
+.btn-shackled__text {
+  position: relative;
+  top: 0;
+  padding: 0 50px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+  letter-spacing: 10px;
+  transition: all 1s ease;
+  overflow: hidden;
+}
+.btn-shackled__text::before,
+.btn-shackled__text::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: #eee;
+  transition: all 0.8s ease;
+}
+.btn-shackled__text::before {
+  left: 0;
+  z-index: 2;
+}
+.btn-shackled__text::after {
+  right: 0;
+}
+.btn-shackled__text span {
+  position: relative;
+  z-index: 2;
+}
+@keyframes rotate-s {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ./shackled */
