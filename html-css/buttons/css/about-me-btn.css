@@ -1,0 +1,261 @@
+/* !START about-me-btn */
+@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono");
+.glitch-btn-wrapper a {
+  text-decoration: none;
+  color: #00ffb4;
+}
+
+.glitch-btn {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  color: #afafaf;
+}
+
+.glitch-btn .glitch-btn__mask {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  display: none;
+}
+
+.glitch-btn .glitch-btn__mask span {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+  top: -100%;
+}
+
+.glitch-btn:hover {
+  color: #4e4e4e;
+}
+
+.glitch-btn:hover:before {
+  background: #00ffb4;
+  transform: translateX(120%) scaleX(3) scaleY(0.8);
+}
+
+.glitch-btn:before {
+  content: "";
+  position: absolute;
+  left: -15%;
+  top: -50%;
+  background: #4e4e4e;
+  width: 40%;
+  height: 200%;
+  padding: 0px;
+  z-index: -1;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.glitch-btn:after {
+  content: "";
+  position: absolute;
+  left: -5%;
+  top: 105%;
+  background: #00ffb4;
+  width: 112%;
+  height: 10%;
+  padding: 0px;
+  z-index: -1;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.glitch-btn:hover:after {
+  background: #4e4e4e;
+  transform: translateX(-55%) translateY(-600%) rotate(90deg) scaleX(0.3);
+}
+
+.glitch-btn .glitch-btn__mask--1 {
+  height: 20%;
+  top: 19%;
+}
+
+.glitch-btn .glitch-btn__mask--2 {
+  height: 30%;
+  top: 35%;
+}
+
+.glitch-btn .glitch-btn__mask--3 {
+  height: 57%;
+  top: 63%;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.glitch-btn:hover .glitch-btn__mask--1 {
+  animation: glitchin1 0.2s 0.3s both;
+}
+
+.glitch-btn:hover .glitch-btn__mask--2 {
+  animation: glitchin2 0.2s 0.2s both;
+}
+
+.glitch-btn:hover .glitch-btn__mask--3 {
+  animation: glitchin1 0.2s 0.2s both;
+}
+
+.glitch-btn:hover .hidden {
+  animation: fade-in 0.1s 0.2s forwards;
+}
+
+.glitch-btn:hover .glitch-btn__text {
+  animation: fade-in 0.1s 0.2s forwards;
+}
+
+.glitch-btn:hover .glitch-btn__mask {
+  display: block;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes glitchin1 {
+  100% {
+    opacity: 0;
+    transform: translate(0px, 0px);
+  }
+  95% {
+    opacity: 1;
+    transform: translate(0.5px, 0.05px);
+  }
+  90% {
+    transform: translate(0.6px, -0.3px);
+  }
+  85% {
+    transform: translate(1.2px, 0px);
+  }
+  80% {
+    transform: translate(1.2px, 0.2px);
+  }
+  75% {
+    transform: translate(0.5px, 1px);
+  }
+  70% {
+    transform: translate(0.3px, 1.2px);
+  }
+  65% {
+    transform: translate(-2.1px, 0.7px);
+  }
+  60% {
+    transform: translate(3.6px, 0.4px);
+  }
+  55% {
+    transform: translate(0.45px, 1.8px);
+  }
+  50% {
+    transform: translate(-3px, -1px);
+  }
+  45% {
+    transform: translate(-4.4px, 1.1px);
+  }
+  40% {
+    transform: translate(-4.2px, 2.4px);
+  }
+  35% {
+    transform: translate(2.6px, 1.3px);
+  }
+  30% {
+    transform: translate(-1.4px, 2.8px);
+  }
+  25% {
+    transform: translate(6px, 0.75px);
+  }
+  20% {
+    transform: translate(0px, -1.6px);
+  }
+  15% {
+    transform: translate(-5.95px, -0.85px);
+  }
+  10% {
+    transform: translate(3.6px, 3.6px);
+  }
+  5% {
+    transform: translate(-0.95px, -0.95px);
+  }
+  1% {
+    opacity: 1;
+  }
+}
+@keyframes glitchin2 {
+  100% {
+    opacity: 0;
+    transform: translate(0px, 0px);
+  }
+  95% {
+    opacity: 1;
+    transform: translate(-0.5px, -0.05px);
+  }
+  90% {
+    transform: translate(-0.6px, 0.3px);
+  }
+  85% {
+    transform: translate(-1.2px, 0px);
+  }
+  80% {
+    transform: translate(-1.2px, -0.2px);
+  }
+  75% {
+    transform: translate(-0.5px, -1px);
+  }
+  70% {
+    transform: translate(-0.3px, -1.2px);
+  }
+  65% {
+    transform: translate(2.1px, -0.7px);
+  }
+  60% {
+    transform: translate(-3.6px, -0.4px);
+  }
+  55% {
+    transform: translate(-0.45px, -1.8px);
+  }
+  50% {
+    transform: translate(3px, 1px);
+  }
+  45% {
+    transform: translate(4.4px, -1.1px);
+  }
+  40% {
+    transform: translate(4.2px, -2.4px);
+  }
+  35% {
+    transform: translate(-2.6px, -1.3px);
+  }
+  30% {
+    transform: translate(1.4px, -2.8px);
+  }
+  25% {
+    transform: translate(-6px, -0.75px);
+  }
+  20% {
+    transform: translate(0px, 1.6px);
+  }
+  15% {
+    transform: translate(5.95px, 0.85px);
+  }
+  10% {
+    transform: translate(-3.6px, -3.6px);
+  }
+  5% {
+    transform: translate(0.95px, 0.95px);
+  }
+  1% {
+    opacity: 1;
+  }
+}
+/* ! END about-me-btn */
